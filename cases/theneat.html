@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TheNeat — Pejoy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+<style>
+.case-hero{height:480px;overflow:hidden;position:relative}
+.case-hero img{width:100%;height:100%;object-fit:cover}
+.case-hero-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(26,26,46,0.5) 0%,transparent 60%)}
+.case-intro{padding:64px 0 0}
+.case-meta{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px}
+.meta-tag{font-size:10px;padding:4px 12px;border-radius:12px;background:var(--pj3);color:var(--pj2);letter-spacing:0.3px}
+.case-intro h1{font-family:var(--serif);font-size:clamp(32px,4vw,52px);font-weight:400;color:var(--ink);margin-bottom:12px;line-height:1.1}
+.case-subtitle{font-size:15px;color:var(--ink3);font-weight:300;padding-bottom:40px;border-bottom:0.5px solid var(--border);margin-bottom:56px;line-height:1.6}
+.case-content{padding-bottom:100px}
+.case-section{margin-bottom:56px}
+.case-section h2{font-size:10px;letter-spacing:2.5px;color:var(--pj2);text-transform:uppercase;margin-bottom:18px;font-weight:500}
+.case-section p{font-size:15px;color:var(--ink2);line-height:1.9;font-weight:300}
+.case-section ul{list-style:none}
+.case-section ul li{font-size:15px;color:var(--ink2);padding:12px 0;border-bottom:0.5px solid var(--border);display:flex;align-items:flex-start;gap:14px;line-height:1.7;font-weight:300}
+.case-section ul li:last-child{border:none}
+.case-section ul li::before{content:'';width:5px;height:5px;background:var(--pj2);border-radius:50%;margin-top:10px;flex-shrink:0}
+.result-box{background:var(--pj3);border-radius:14px;padding:28px 32px}
+.result-box p{font-size:15px;color:var(--pj4);line-height:1.9}
+.case-gallery{display:flex;flex-direction:column;gap:16px;margin-top:8px}
+.case-gallery img{width:100%;border-radius:10px;object-fit:cover}
+.back-link{display:inline-flex;align-items:center;gap:8px;font-size:13px;color:var(--ink3);text-decoration:none;padding:24px 0;transition:color 0.2s}
+.back-link:hover{color:var(--pj2)}
+.next-case{background:var(--bg2);padding:64px 0}
+.next-label{font-size:10px;letter-spacing:2.5px;color:var(--ink3);text-transform:uppercase;margin-bottom:12px}
+.next-case a{font-family:var(--serif);font-size:clamp(22px,3vw,36px);font-weight:400;color:var(--ink);text-decoration:none;display:flex;align-items:center;gap:16px;transition:color 0.2s}
+.next-case a:hover{color:var(--pj2)}
+@media(max-width:768px){.case-hero{height:300px}}
+</style>
+</head>
+<body class="en">
+
+<nav>
+  <div class="nav-inner">
+    <a href="../index.html" class="logo"><img src="../images/pejoy-logo.png" alt="Pejoy" class="logo-icon"></a>
+    <div class="nav-links">
+      <a href="../index.html#about" data-en>About</a><a href="../index.html#about" data-zh>关于我们</a>
+      <a href="../index.html#services" data-en>Services</a><a href="../index.html#services" data-zh>服务</a>
+      <a href="../index.html#cases" class="active" data-en>Work</a><a href="../index.html#cases" class="active" data-zh>案例</a>
+      <a href="../index.html#contact" data-en>Contact</a><a href="../index.html#contact" data-zh>联系我们</a>
+    </div>
+    <div class="nav-right">
+      <div class="lang-toggle">
+        <button class="lang-btn active" id="btn-en" onclick="setLang('en')">EN</button>
+        <button class="lang-btn" id="btn-zh" onclick="setLang('zh')">中文</button>
+      </div>
+      <a href="../index.html#contact" class="nav-cta"><span data-en>Get in touch</span><span data-zh>联系我们</span></a>
+    </div>
+  </div>
+</nav>
+
+<div class="case-hero">
+  <img src="../images/theneat-hero.jpg" alt="TheNeat">
+  <div class="case-hero-overlay"></div>
+</div>
+
+<div class="container">
+  <a href="../index.html#cases" class="back-link">← <span data-en>All cases</span><span data-zh>所有案例</span></a>
+</div>
+
+<section class="case-intro">
+  <div class="container">
+    <div class="case-meta">
+      <span class="meta-tag" data-en>Brand from 0</span><span class="meta-tag" data-zh>从0建品牌</span>
+      <span class="meta-tag" data-en>VI System</span><span class="meta-tag" data-zh>VI系统</span>
+      <span class="meta-tag" data-en>Website</span><span class="meta-tag" data-zh>官网建设</span>
+      <span class="meta-tag" data-en>Campaign Planning</span><span class="meta-tag" data-zh>活动策划</span>
+      <span class="meta-tag" data-en>Social Media</span><span class="meta-tag" data-zh>社媒运营</span>
+    </div>
+    <h1>TheNeat</h1>
+    <p class="case-subtitle">
+      <span data-en>Wellness Brand Built from Zero — Compact fitness equipment for small spaces</span>
+      <span data-zh>从0到1打造健康生活方式品牌 — 为小空间提供高效健身方案</span>
+    </p>
+  </div>
+</section>
+
+<section class="case-content">
+  <div class="container">
+
+    <div class="case-section fade-in">
+      <h2><span data-en>Overview</span><span data-zh>项目概述</span></h2>
+      <p>
+        <span data-en>We helped build TheNeat from the ground up as an innovative wellness brand, specializing in compact, beginner-friendly fitness equipment that provides efficient workout solutions for small spaces. We introduced the "home gym" concept — making home workouts effortless and accessible.</span>
+        <span data-zh>我们帮助 TheNeat 从 0 到 1 打造了一个创新的健康生活方式品牌，专注于小巧的退阶运动器材，为小空间提供高效健身方案。我们提出"home gym"概念，让用户可以方便地在家健身。</span>
+      </p>
+    </div>
+
+    <div class="case-section fade-in">
+      <h2><span data-en>What we did</span><span data-zh>我们做了什么</span></h2>
+      <ul>
+        <li><span data-en>Developed the "home gym" brand concept from scratch</span><span data-zh>从零开发"home gym"品牌概念</span></li>
+        <li><span data-en>Created a full cohesive VI system ensuring consistent brand presentation across all channels</span><span data-zh>设计统一的VI系统，确保品牌在各渠道一致呈现</span></li>
+        <li><span data-en>Designed a magazine-style website with a Lifestyle section showcasing products in four home settings</span><span data-zh>以时尚健康的杂志风格设计官网，设立Lifestyle栏目，展示产品在四个居家场景的多样应用</span></li>
+        <li><span data-en>Built a comprehensive customer service system from scratch</span><span data-zh>搭建完善的客服系统</span></li>
+        <li><span data-en>Planned and executed the "Gift of Health — 15 Mins to a Better You" campaign</span><span data-zh>策划并执行"Gift of Health——15 Mins to a Better You"推广活动</span></li>
+      </ul>
+    </div>
+
+    <div class="case-section fade-in">
+      <h2><span data-en>Visual showcase</span><span data-zh>视觉展示</span></h2>
+      <div class="case-gallery">
+        <img src="../images/theneat-vi.jpg" alt="TheNeat VI system" loading="lazy">
+        <img src="../images/theneat-materials.jpg" alt="TheNeat brand materials" loading="lazy">
+        <img src="../images/theneat-website.jpg" alt="TheNeat website" loading="lazy">
+        <img src="../images/theneat-social.jpg" alt="TheNeat social media" loading="lazy">
+      </div>
+    </div>
+
+    <div class="case-section fade-in">
+      <h2><span data-en>Result</span><span data-zh>项目成果</span></h2>
+      <div class="result-box">
+        <p>
+          <span data-en>Successfully launched TheNeat as a fully formed brand with strong visual identity, cohesive digital presence, and a campaign that resonated with target users — encouraging daily healthy habits through frictionless fitness messaging.</span>
+          <span data-zh>成功将TheNeat打造为具有强烈视觉识别度、一致数字形象的完整品牌，推广活动精准触达目标用户，以无感健身的场景营销鼓励用户养成健康习惯。</span>
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div class="next-case">
+  <div class="container">
+    <div class="next-label"><span data-en>Next case</span><span data-zh>下一个案例</span></div>
+    <a href="celfull.html">
+      <span data-en>Celfull — Building Trust for a Clinical Anti-aging Brand</span>
+      <span data-zh>Celfull — 临床级抗衰品牌的信任力建设</span>
+      <span>→</span>
+    </a>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <span class="footer-copy">© 2025 Pejoy Marketing &amp; Strategy</span>
+    <div class="footer-links"><a href="#">Instagram</a><a href="#">LinkedIn</a><a href="mailto:pejoy@foxmail.com">Email</a></div>
+  </div>
+</footer>
+
+<script>
+function setLang(lang){document.body.className=lang;document.getElementById('btn-en').classList.toggle('active',lang==='en');document.getElementById('btn-zh').classList.toggle('active',lang==='zh');localStorage.setItem('pejoy-lang',lang);}
+const saved=localStorage.getItem('pejoy-lang');if(saved)setLang(saved);
+const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible');}),{threshold:0.08});
+document.querySelectorAll('.fade-in').forEach(el=>obs.observe(el));
+</script>
+</body>
+</html>

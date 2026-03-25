@@ -1,0 +1,43 @@
+backend:
+  name: github
+  repo: thisisritayao-beep/pejoy-site
+  branch: main
+
+media_folder: "images"
+public_folder: "/images"
+
+collections:
+  - name: "cases"
+    label: "Cases"
+    label_singular: "Case"
+    folder: "cases"
+    extension: "html"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title (EN)", name: "title_en", widget: "string" }
+      - { label: "Title (ZH)", name: "title_zh", widget: "string" }
+      - { label: "Subtitle (EN)", name: "subtitle_en", widget: "string" }
+      - { label: "Subtitle (ZH)", name: "subtitle_zh", widget: "string" }
+      - { label: "Hero Image", name: "hero_image", widget: "image" }
+      - { label: "Overview (EN)", name: "overview_en", widget: "text" }
+      - { label: "Overview (ZH)", name: "overview_zh", widget: "text" }
+      - { label: "Result (EN)", name: "result_en", widget: "text" }
+      - { label: "Result (ZH)", name: "result_zh", widget: "text" }
+      - label: "Gallery Images"
+        name: "gallery"
+        widget: "list"
+        field: { label: "Image", name: "image", widget: "image" }
+
+  - name: "settings"
+    label: "Site Settings"
+    files:
+      - label: "General"
+        name: "general"
+        file: "settings.json"
+        fields:
+          - { label: "Contact Email", name: "email", widget: "string" }
+          - { label: "Hero Title (EN)", name: "hero_en", widget: "string" }
+          - { label: "Hero Title (ZH)", name: "hero_zh", widget: "string" }
+          - { label: "About Text (EN)", name: "about_en", widget: "text" }
+          - { label: "About Text (ZH)", name: "about_zh", widget: "text" }

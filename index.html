@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pejoy — Marketing & Strategy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+/* INDEX-SPECIFIC STYLES */
+.hero{padding:100px 0 80px;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:-120px;right:-180px;width:700px;height:700px;background:radial-gradient(circle,rgba(83,74,183,0.09) 0%,transparent 70%);pointer-events:none}
+.hero-inner{max-width:1120px;margin:0 auto;padding:0 40px}
+.hero h1{font-family:var(--serif);font-size:clamp(40px,5vw,64px);font-weight:400;line-height:1.08;color:var(--ink);max-width:720px;margin-bottom:22px}
+.hero h1 em{color:var(--pj2);font-style:italic}
+.hero-sub{font-size:16px;color:var(--ink2);line-height:1.8;max-width:500px;margin-bottom:40px;font-weight:300}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:72px}
+.hero-stats{display:flex;border-top:0.5px solid var(--border);padding-top:36px;flex-wrap:wrap;gap:0}
+.stat{padding-right:48px;margin-right:48px;border-right:0.5px solid var(--border)}
+.stat:last-child{border:none;padding:0;margin:0}
+.stat-num{font-family:var(--serif);font-size:40px;color:var(--pj);line-height:1}
+.stat-label{font-size:12px;color:var(--ink3);margin-top:4px}
+
+/* ABOUT */
+.about{padding:100px 0}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.about-left p{font-size:15px;color:var(--ink2);line-height:1.85;font-weight:300;margin-top:4px}
+.values-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.value-card{padding:22px;border:0.5px solid var(--border);border-radius:var(--r);background:var(--white);transition:border-color 0.2s,box-shadow 0.2s}
+.value-card:hover{border-color:var(--border2);box-shadow:0 4px 20px rgba(61,48,144,0.07)}
+.v-icon{width:34px;height:34px;background:var(--pj3);border-radius:9px;display:flex;align-items:center;justify-content:center;margin-bottom:12px}
+.v-icon svg{width:16px;height:16px;stroke:var(--pj2);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.value-card h4{font-size:13px;font-weight:500;color:var(--ink);margin-bottom:4px}
+.value-card p{font-size:12px;color:var(--ink3);line-height:1.6}
+
+/* SERVICES */
+.services{padding:100px 0;background:var(--bg2)}
+.section-header{margin-bottom:48px}
+.section-header p{font-size:15px;color:var(--ink2);font-weight:300;max-width:480px;margin-top:10px}
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.svc-card{padding:28px;background:var(--white);border:0.5px solid var(--border);border-radius:var(--r);transition:transform 0.2s,box-shadow 0.2s}
+.svc-card:hover{transform:translateY(-3px);box-shadow:0 8px 32px rgba(61,48,144,0.08)}
+.svc-num{font-size:10px;letter-spacing:2px;color:var(--pj5);margin-bottom:14px}
+.svc-card h3{font-size:15px;font-weight:500;color:var(--ink);margin-bottom:14px}
+.svc-items{list-style:none}
+.svc-items li{font-size:12px;color:var(--ink2);padding:6px 0;border-bottom:0.5px solid var(--border);line-height:1.4}
+.svc-items li:last-child{border:none}
+
+/* CASES */
+.cases{padding:100px 0}
+.cases-header{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:36px;flex-wrap:wrap;gap:20px}
+.cases-filter{display:flex;gap:8px;flex-wrap:wrap}
+.filter-btn{padding:6px 16px;border:0.5px solid var(--border2);border-radius:20px;font-size:12px;font-family:var(--sans);cursor:pointer;background:transparent;color:var(--ink2);transition:all 0.2s}
+.filter-btn:hover,.filter-btn.active{background:var(--pj);color:#fff;border-color:var(--pj)}
+.cases-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+
+/* CONTACT */
+.contact{padding:100px 0;background:var(--pj);position:relative;overflow:hidden}
+.contact::before{content:'';position:absolute;top:-200px;left:-200px;width:600px;height:600px;background:radial-gradient(circle,rgba(127,119,221,0.22) 0%,transparent 65%);pointer-events:none}
+.contact-inner{text-align:center;position:relative}
+.contact h2{font-family:var(--serif);font-size:clamp(28px,4vw,52px);font-weight:400;color:#fff;margin-bottom:14px}
+.contact h2 em{color:rgba(255,255,255,0.5);font-style:italic}
+.contact p{font-size:15px;color:rgba(255,255,255,0.6);margin-bottom:36px;font-weight:300}
+.contact-email{display:inline-block;padding:16px 36px;background:#fff;color:var(--pj);border:none;border-radius:var(--rm);font-size:15px;font-weight:500;font-family:var(--sans);cursor:pointer;text-decoration:none;transition:opacity 0.2s}
+.contact-email:hover{opacity:0.9}
+
+@media(max-width:768px){
+  .hero-inner{padding:0 20px}
+  .about-grid{grid-template-columns:1fr;gap:40px}
+  .services-grid{grid-template-columns:1fr}
+  .cases-grid{grid-template-columns:1fr}
+  .hero-stats{flex-wrap:wrap;gap:24px}
+  .stat{border:none;padding:0;margin:0}
+  .cases-header{flex-direction:column;align-items:flex-start}
+}
+</style>
+</head>
+<body class="en">
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="logo">
+      <img src="images/pejoy-logo.png" alt="Pejoy" class="logo-icon">
+    </a>
+    <div class="nav-links">
+      <a href="#about" data-en>About</a><a href="#about" data-zh>关于我们</a>
+      <a href="#services" data-en>Services</a><a href="#services" data-zh>服务</a>
+      <a href="#cases" data-en>Work</a><a href="#cases" data-zh>案例</a>
+      <a href="#contact" data-en>Contact</a><a href="#contact" data-zh>联系我们</a>
+    </div>
+    <div class="nav-right">
+      <div class="lang-toggle">
+        <button class="lang-btn active" id="btn-en" onclick="setLang('en')">EN</button>
+        <button class="lang-btn" id="btn-zh" onclick="setLang('zh')">中文</button>
+      </div>
+      <a href="#contact" class="nav-cta"><span data-en>Get in touch</span><span data-zh>联系我们</span></a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <h1 class="fade-in">
+      <span data-en>Strategy &amp; creativity<br>for brands that want to<br><em>grow globally</em></span>
+      <span data-zh>为品牌全球增长<br>提供<em>策略与创意</em></span>
+    </h1>
+    <p class="hero-sub fade-in" style="transition-delay:0.1s">
+      <span data-en>Specializing in comprehensive overseas brand marketing — tailored strategies, localized perspectives, and creative content that drives long-term growth.</span>
+      <span data-zh>专注海外品牌营销，从本土化视角深挖品牌潜力。用创意内容与精准洞察，帮助品牌在国际市场实现长期增长与可持续价值。</span>
+    </p>
+    <div class="hero-actions fade-in" style="transition-delay:0.2s">
+      <a href="#cases" class="btn-primary"><span data-en>View our work</span><span data-zh>查看案例</span></a>
+      <a href="#contact" class="btn-ghost"><span data-en>Talk to us →</span><span data-zh>联系我们 →</span></a>
+    </div>
+    <div class="hero-stats fade-in" style="transition-delay:0.3s">
+      <div class="stat">
+        <div class="stat-num">3+</div>
+        <div class="stat-label"><span data-en>Brand cases</span><span data-zh>品牌案例</span></div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">6</div>
+        <div class="stat-label"><span data-en>Core services</span><span data-zh>核心服务</span></div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">B &amp; C</div>
+        <div class="stat-label"><span data-en>End coverage</span><span data-zh>端覆盖</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee-wrap">
+  <div class="marquee-track">
+    <span>Brand Strategy</span><span class="dot">·</span><span>VI Design</span><span class="dot">·</span><span>Social Media</span><span class="dot">·</span><span>Website Development</span><span class="dot">·</span><span>Cross-cultural Marketing</span><span class="dot">·</span><span>Customer Service</span><span class="dot">·</span><span>KOL Collaboration</span><span class="dot">·</span><span>EDM Campaigns</span><span class="dot">·</span>
+    <span>Brand Strategy</span><span class="dot">·</span><span>VI Design</span><span class="dot">·</span><span>Social Media</span><span class="dot">·</span><span>Website Development</span><span class="dot">·</span><span>Cross-cultural Marketing</span><span class="dot">·</span><span>Customer Service</span><span class="dot">·</span><span>KOL Collaboration</span><span class="dot">·</span><span>EDM Campaigns</span><span class="dot">·</span>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-left fade-in">
+        <span class="tag-label"><span data-en>About us</span><span data-zh>关于我们</span></span>
+        <h2 class="section-title"><span data-en>Where strategy<br>meets creativity</span><span data-zh>策略与创意<br>在这里交汇</span></h2>
+        <p>
+          <span data-en>We specialize in overseas brand marketing, uncovering brand potential through a localized perspective. With creative content and precise insights, we help brands achieve long-term growth and sustainable value in international markets.</span>
+          <span data-zh>我们专注海外品牌营销，从本土化视角深挖品牌潜力。用创意内容与精准洞察，帮助品牌在国际市场实现长期增长与可持续价值。</span>
+        </p>
+      </div>
+      <div class="values-grid fade-in" style="transition-delay:0.15s">
+        <div class="value-card">
+          <div class="v-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M2 12h20M12 2a15 15 0 010 20M12 2a15 15 0 000 20"/></svg></div>
+          <h4><span data-en>Global Perspective</span><span data-zh>全球视野</span></h4>
+          <p><span data-en>Local insight, international reach</span><span data-zh>本土洞察，国际视野</span></p>
+        </div>
+        <div class="value-card">
+          <div class="v-icon"><svg viewBox="0 0 24 24"><path d="M12 2l2 7h7l-5.5 4 2 7L12 16l-5.5 4 2-7L3 9h7z"/></svg></div>
+          <h4><span data-en>Innovation</span><span data-zh>创新</span></h4>
+          <p><span data-en>Ideas that move brands forward</span><span data-zh>推动品牌前行的创意</span></p>
+        </div>
+        <div class="value-card">
+          <div class="v-icon"><svg viewBox="0 0 24 24"><path d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.66 0 3-4.03 3-9s-1.34-9-3-9"/></svg></div>
+          <h4><span data-en>Sustainability</span><span data-zh>可持续发展</span></h4>
+          <p><span data-en>Long-term brand value</span><span data-zh>长期品牌价值</span></p>
+        </div>
+        <div class="value-card">
+          <div class="v-icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg></div>
+          <h4><span data-en>Collaboration</span><span data-zh>团队协作</span></h4>
+          <p><span data-en>Partners every step of the way</span><span data-zh>每一步都是并肩同行</span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="container">
+    <div class="section-header fade-in">
+      <span class="tag-label"><span data-en>Our services</span><span data-zh>服务内容</span></span>
+      <h2 class="section-title"><span data-en>Full-spectrum brand solutions</span><span data-zh>全链路品牌服务</span></h2>
+      <p><span data-en>From strategy and identity to content and distribution — everything a brand needs to grow.</span><span data-zh>从策略到视觉，从内容到渠道——品牌增长所需的一切。</span></p>
+    </div>
+    <div class="services-grid">
+      <div class="svc-card fade-in"><div class="svc-num">01</div><h3><span data-en>Brand Strategy</span><span data-zh>品牌战略</span></h3><ul class="svc-items"><li><span data-en>Market research</span><span data-zh>市场调研</span></li><li><span data-en>Brand localization &amp; positioning</span><span data-zh>品牌本土化定位</span></li><li><span data-en>Target audience analysis</span><span data-zh>目标受众分析</span></li><li><span data-en>Brand vision &amp; mission</span><span data-zh>品牌愿景与使命</span></li></ul></div>
+      <div class="svc-card fade-in" style="transition-delay:0.08s"><div class="svc-num">02</div><h3><span data-en>Visual Design</span><span data-zh>视觉设计</span></h3><ul class="svc-items"><li><span data-en>VI system design</span><span data-zh>VI系统设计</span></li><li><span data-en>Promotional materials</span><span data-zh>宣传物料</span></li><li><span data-en>Signage &amp; wayfinding</span><span data-zh>导视/标识设计</span></li><li><span data-en>Brand identity refresh</span><span data-zh>品牌视觉焕新</span></li></ul></div>
+      <div class="svc-card fade-in" style="transition-delay:0.16s"><div class="svc-num">03</div><h3><span data-en>Social Media Operations</span><span data-zh>社媒运营</span></h3><ul class="svc-items"><li><span data-en>Platform management</span><span data-zh>社交平台管理</span></li><li><span data-en>Content creation &amp; visual optimization</span><span data-zh>内容创作与视觉优化</span></li><li><span data-en>KOL collaboration</span><span data-zh>KOL合作</span></li></ul></div>
+      <div class="svc-card fade-in" style="transition-delay:0.08s"><div class="svc-num">04</div><h3><span data-en>Website Design &amp; Development</span><span data-zh>官网设计与建设</span></h3><ul class="svc-items"><li><span data-en>Website design</span><span data-zh>官网设计</span></li><li><span data-en>Content management</span><span data-zh>网站内容管理</span></li><li><span data-en>Product page design</span><span data-zh>产品页面设计</span></li></ul></div>
+      <div class="svc-card fade-in" style="transition-delay:0.16s"><div class="svc-num">05</div><h3><span data-en>Cross-cultural Marketing</span><span data-zh>跨文化营销</span></h3><ul class="svc-items"><li><span data-en>Campaign planning</span><span data-zh>活动策划</span></li><li><span data-en>Brand collaborations</span><span data-zh>品牌跨界</span></li><li><span data-en>Affiliate marketing</span><span data-zh>联盟营销</span></li></ul></div>
+      <div class="svc-card fade-in" style="transition-delay:0.24s"><div class="svc-num">06</div><h3><span data-en>Customer Service</span><span data-zh>客户服务</span></h3><ul class="svc-items"><li><span data-en>Customer support systems</span><span data-zh>客户支持体系</span></li><li><span data-en>After-sales service</span><span data-zh>售后服务</span></li><li><span data-en>Brand experience optimization</span><span data-zh>品牌体验优化</span></li></ul></div>
+    </div>
+  </div>
+</section>
+
+<!-- CASES -->
+<section class="cases" id="cases">
+  <div class="container">
+    <div class="cases-header">
+      <div class="fade-in">
+        <span class="tag-label"><span data-en>Selected work</span><span data-zh>精选案例</span></span>
+        <h2 class="section-title"><span data-en>Cases we're proud of</span><span data-zh>我们引以为傲的案例</span></h2>
+      </div>
+      <div class="cases-filter fade-in">
+        <button class="filter-btn active" data-filter="all"><span data-en>All</span><span data-zh>全部</span></button>
+        <button class="filter-btn" data-filter="brand"><span data-en>Brand</span><span data-zh>品牌策略</span></button>
+        <button class="filter-btn" data-filter="vi"><span data-en>Visual</span><span data-zh>视觉设计</span></button>
+        <button class="filter-btn" data-filter="web"><span data-en>Website</span><span data-zh>官网</span></button>
+        <button class="filter-btn" data-filter="social"><span data-en>Social</span><span data-zh>社媒</span></button>
+      </div>
+    </div>
+    <div class="cases-grid">
+      <a href="cases/opove.html" class="case-card fade-in" data-tags="brand vi web social">
+        <div class="case-thumb"><img src="images/opove-logo.jpg" alt="Opove" loading="lazy"></div>
+        <div class="case-body">
+          <div class="case-tags"><span class="case-tag">VI System</span><span class="case-tag">Website</span><span class="case-tag">Social Media</span></div>
+          <h3><span data-en>Opove — Health Brand Identity Upgrade</span><span data-zh>Opove — 健康设备品牌升级</span></h3>
+          <p><span data-en>Full VI redesign, website upgrade and social media growth for an electronic health products brand.</span><span data-zh>为健康电子产品品牌进行全案VI升级、官网改版及社媒运营增长。</span></p>
+          <div class="case-more"><span data-en>View case →</span><span data-zh>查看案例 →</span></div>
+        </div>
+      </a>
+      <a href="cases/theneat.html" class="case-card fade-in" style="transition-delay:0.1s" data-tags="brand vi web social">
+        <div class="case-thumb"><img src="images/theneat-hero.jpg" alt="TheNeat" loading="lazy"></div>
+        <div class="case-body">
+          <div class="case-tags"><span class="case-tag">Brand from 0</span><span class="case-tag">VI System</span><span class="case-tag">Campaign</span></div>
+          <h3><span data-en>TheNeat — Wellness Brand Built from Zero</span><span data-zh>TheNeat — 从0到1打造健康生活方式品牌</span></h3>
+          <p><span data-en>Built a complete wellness lifestyle brand from scratch — strategy, VI, website and campaign.</span><span data-zh>从零打造完整的健康生活方式品牌——涵盖策略、VI、官网与推广活动。</span></p>
+          <div class="case-more"><span data-en>View case →</span><span data-zh>查看案例 →</span></div>
+        </div>
+      </a>
+      <a href="cases/celfull.html" class="case-card fade-in" style="transition-delay:0.15s" data-tags="brand social">
+        <div class="case-thumb"><img src="images/celfull-product.jpg" alt="Celfull" loading="lazy"></div>
+        <div class="case-body">
+          <div class="case-tags"><span class="case-tag">Brand Strategy</span><span class="case-tag">Interview Videos</span><span class="case-tag">EDM</span></div>
+          <h3><span data-en>Celfull — Building Trust for a Clinical Anti-aging Brand</span><span data-zh>Celfull — 临床级抗衰品牌的信任力建设</span></h3>
+          <p><span data-en>PhD interviews, user testimonials and precision EDM driving exponential subscriber growth.</span><span data-zh>博士访谈、用户证言及精准EDM营销，实现订阅用户指数级增长。</span></p>
+          <div class="case-more"><span data-en>View case →</span><span data-zh>查看案例 →</span></div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="container">
+    <div class="contact-inner fade-in">
+      <h2><span data-en>Ready to build<br><em>your brand?</em></span><span data-zh>准备好打造<br><em>你的品牌了吗？</em></span></h2>
+      <p><span data-en>From strategy to execution — let's talk about your brand goals.</span><span data-zh>从策略到执行，让我们一起聊聊你的品牌目标。</span></p>
+      <a class="contact-email" href="mailto:pejoy@foxmail.com">pejoy@foxmail.com</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <span class="footer-copy">© 2025 Pejoy Marketing &amp; Strategy</span>
+    <div class="footer-links">
+      <a href="#">Instagram</a><a href="#">LinkedIn</a><a href="mailto:pejoy@foxmail.com">Email</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+function setLang(lang){
+  document.body.className=lang;
+  document.getElementById('btn-en').classList.toggle('active',lang==='en');
+  document.getElementById('btn-zh').classList.toggle('active',lang==='zh');
+  localStorage.setItem('pejoy-lang',lang);
+}
+// Restore saved language
+const saved=localStorage.getItem('pejoy-lang');
+if(saved) setLang(saved);
+
+// Filter
+document.querySelectorAll('.filter-btn').forEach(btn=>{
+  btn.addEventListener('click',function(){
+    document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));
+    this.classList.add('active');
+    const f=this.dataset.filter;
+    document.querySelectorAll('.case-card').forEach(c=>{
+      c.style.display=(f==='all'||c.dataset.tags.includes(f))?'block':'none';
+    });
+  });
+});
+
+// Fade in
+const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible');}),{threshold:0.1});
+document.querySelectorAll('.fade-in').forEach(el=>obs.observe(el));
+</script>
+</body>
+</html>

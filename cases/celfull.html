@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Celfull — Pejoy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+<style>
+.case-hero{height:480px;overflow:hidden;position:relative}
+.case-hero img{width:100%;height:100%;object-fit:cover}
+.case-hero-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(26,26,46,0.5) 0%,transparent 60%)}
+.case-intro{padding:64px 0 0}
+.case-meta{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px}
+.meta-tag{font-size:10px;padding:4px 12px;border-radius:12px;background:var(--pj3);color:var(--pj2);letter-spacing:0.3px}
+.case-intro h1{font-family:var(--serif);font-size:clamp(32px,4vw,52px);font-weight:400;color:var(--ink);margin-bottom:12px;line-height:1.1}
+.case-subtitle{font-size:15px;color:var(--ink3);font-weight:300;padding-bottom:40px;border-bottom:0.5px solid var(--border);margin-bottom:56px;line-height:1.6}
+.case-content{padding-bottom:100px}
+.case-section{margin-bottom:56px}
+.case-section h2{font-size:10px;letter-spacing:2.5px;color:var(--pj2);text-transform:uppercase;margin-bottom:18px;font-weight:500}
+.case-section p{font-size:15px;color:var(--ink2);line-height:1.9;font-weight:300}
+.case-section ul{list-style:none}
+.case-section ul li{font-size:15px;color:var(--ink2);padding:12px 0;border-bottom:0.5px solid var(--border);display:flex;align-items:flex-start;gap:14px;line-height:1.7;font-weight:300}
+.case-section ul li:last-child{border:none}
+.case-section ul li::before{content:'';width:5px;height:5px;background:var(--pj2);border-radius:50%;margin-top:10px;flex-shrink:0}
+.result-box{background:var(--pj3);border-radius:14px;padding:28px 32px}
+.result-box p{font-size:15px;color:var(--pj4);line-height:1.9}
+.case-gallery{display:flex;flex-direction:column;gap:16px;margin-top:8px}
+.case-gallery img{width:100%;border-radius:10px;object-fit:cover}
+.case-videos{display:flex;flex-direction:column;gap:16px;margin-top:8px}
+.case-videos iframe{width:100%;aspect-ratio:16/9;border:none;border-radius:10px}
+.back-link{display:inline-flex;align-items:center;gap:8px;font-size:13px;color:var(--ink3);text-decoration:none;padding:24px 0;transition:color 0.2s}
+.back-link:hover{color:var(--pj2)}
+.next-case{background:var(--bg2);padding:64px 0}
+.next-label{font-size:10px;letter-spacing:2.5px;color:var(--ink3);text-transform:uppercase;margin-bottom:12px}
+.next-case a{font-family:var(--serif);font-size:clamp(22px,3vw,36px);font-weight:400;color:var(--ink);text-decoration:none;display:flex;align-items:center;gap:16px;transition:color 0.2s}
+.next-case a:hover{color:var(--pj2)}
+@media(max-width:768px){.case-hero{height:300px}}
+</style>
+</head>
+<body class="en">
+
+<nav>
+  <div class="nav-inner">
+    <a href="../index.html" class="logo"><img src="../images/pejoy-logo.png" alt="Pejoy" class="logo-icon"></a>
+    <div class="nav-links">
+      <a href="../index.html#about" data-en>About</a><a href="../index.html#about" data-zh>关于我们</a>
+      <a href="../index.html#services" data-en>Services</a><a href="../index.html#services" data-zh>服务</a>
+      <a href="../index.html#cases" class="active" data-en>Work</a><a href="../index.html#cases" class="active" data-zh>案例</a>
+      <a href="../index.html#contact" data-en>Contact</a><a href="../index.html#contact" data-zh>联系我们</a>
+    </div>
+    <div class="nav-right">
+      <div class="lang-toggle">
+        <button class="lang-btn active" id="btn-en" onclick="setLang('en')">EN</button>
+        <button class="lang-btn" id="btn-zh" onclick="setLang('zh')">中文</button>
+      </div>
+      <a href="../index.html#contact" class="nav-cta"><span data-en>Get in touch</span><span data-zh>联系我们</span></a>
+    </div>
+  </div>
+</nav>
+
+<div class="case-hero">
+  <img src="../images/celfull-website1.jpg" alt="Celfull">
+  <div class="case-hero-overlay"></div>
+</div>
+
+<div class="container">
+  <a href="../index.html#cases" class="back-link">← <span data-en>All cases</span><span data-zh>所有案例</span></a>
+</div>
+
+<section class="case-intro">
+  <div class="container">
+    <div class="case-meta">
+      <span class="meta-tag" data-en>Brand Strategy</span><span class="meta-tag" data-zh>品牌策略</span>
+      <span class="meta-tag" data-en>PhD Doctor Interviews</span><span class="meta-tag" data-zh>博士访谈</span>
+      <span class="meta-tag" data-en>User Testimonials</span><span class="meta-tag" data-zh>用户证言</span>
+      <span class="meta-tag" data-en>Social Media</span><span class="meta-tag" data-zh>社媒运营</span>
+      <span class="meta-tag" data-en>EDM</span><span class="meta-tag" data-zh>EDM精准营销</span>
+    </div>
+    <h1>Celfull</h1>
+    <p class="case-subtitle">
+      <span data-en>Building Trust for a Clinical Anti-aging Brand — Exponential subscriber growth through authority and authenticity</span>
+      <span data-zh>临床级抗衰品牌的信任力建设 — 以权威与真实驱动订阅用户指数级增长</span>
+    </p>
+  </div>
+</section>
+
+<section class="case-content">
+  <div class="container">
+
+    <div class="case-section fade-in">
+      <h2><span data-en>Overview</span><span data-zh>项目概述</span></h2>
+      <p>
+        <span data-en>Celfull is a biotechnology company specializing in clinical-driven anti-aging solutions, providing personalized solutions for aging and degenerative diseases. Our work focused on building brand trust through authoritative voices and precision marketing to drive exponential subscriber growth.</span>
+        <span data-zh>CELFULL 是一家生物技术公司，专注于提供以临床为导向的领先抗衰品牌，为衰老及退行性疾病提供个性化解决方案。我们的工作聚焦于通过权威声音和精准营销建立品牌信任，实现订阅用户的指数级增长。</span>
+      </p>
+    </div>
+
+    <div class="case-section fade-in">
+      <h2><span data-en>What we did</span><span data-zh>我们做了什么</span></h2>
+      <ul>
+        <li><span data-en>Produced PhD doctor interview videos to create professional brand endorsement content</span><span data-zh>制作博士访谈视频，打造专业品牌背书内容</span></li>
+        <li><span data-en>Conducted and filmed core user testimonial interviews to build authentic word-of-mouth credibility</span><span data-zh>开展并拍摄核心用户证言访谈，建立真实的口碑可信度</span></li>
+        <li><span data-en>Designed diversified product combinations based on research across different user segments</span><span data-zh>基于不同用户群体的洞察调研结果，针对性设计多样化产品组合</span></li>
+        <li><span data-en>Developed social media content strategy across Instagram and TikTok</span><span data-zh>制定Instagram和TikTok社媒内容策略</span></li>
+        <li><span data-en>Executed precision EDM campaigns around key marketing nodes to convert and retain subscribers</span><span data-zh>结合关键营销节点，通过EDM精准营销触达目标用户，提升订阅转化与留存</span></li>
+      </ul>
+    </div>
+
+    <div class="case-section fade-in">
+      <h2><span data-en>User testimonial videos</span><span data-zh>用户访谈视频</span></h2>
+      <div class="case-videos">
+        <iframe src="https://www.youtube.com/embed/UzgjCzen200" allowfullscreen loading="lazy"></iframe>
+        <iframe src="https://www.youtube.com/embed/THu_ieLGzi0" allowfullscreen loading="lazy"></iframe>
+      </div>
+    </div>
+
+    <div class="case-section fade-in">
+      <h2><span data-en>Visual showcase</span><span data-zh>视觉展示</span></h2>
+      <div class="case-gallery">
+        <img src="../images/celfull-product.jpg" alt="Celfull products" loading="lazy">
+        <img src="../images/celfull-website1.jpg" alt="Celfull website" loading="lazy">
+        <img src="../images/celfull-community.jpg" alt="Celfull community" loading="lazy">
+        <img src="../images/celfull-social.jpg" alt="Celfull social media" loading="lazy">
+      </div>
+    </div>
+
+    <div class="case-section fade-in">
+      <h2><span data-en>Result</span><span data-zh>项目成果</span></h2>
+      <div class="result-box">
+        <p>
+          <span data-en>By combining professional medical authority (PhD doctor endorsements) with authentic user stories, the brand achieved exponential growth in subscribed users. The dual-credibility approach proved highly effective in building trust for a clinical health brand.</span>
+          <span data-zh>通过将专业医学权威（博士背书）与真实用户故事相结合，品牌成功实现订阅用户数量的指数级增长。双维度可信度策略在临床健康品牌的信任构建中被证明极为有效。</span>
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div class="next-case">
+  <div class="container">
+    <div class="next-label"><span data-en>Back to all cases</span><span data-zh>返回所有案例</span></div>
+    <a href="../index.html#cases">
+      <span data-en>View all work →</span>
+      <span data-zh>查看全部案例 →</span>
+    </a>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <span class="footer-copy">© 2025 Pejoy Marketing &amp; Strategy</span>
+    <div class="footer-links"><a href="#">Instagram</a><a href="#">LinkedIn</a><a href="mailto:pejoy@foxmail.com">Email</a></div>
+  </div>
+</footer>
+
+<script>
+function setLang(lang){document.body.className=lang;document.getElementById('btn-en').classList.toggle('active',lang==='en');document.getElementById('btn-zh').classList.toggle('active',lang==='zh');localStorage.setItem('pejoy-lang',lang);}
+const saved=localStorage.getItem('pejoy-lang');if(saved)setLang(saved);
+const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible');}),{threshold:0.08});
+document.querySelectorAll('.fade-in').forEach(el=>obs.observe(el));
+</script>
+</body>
+</html>
