@@ -1,6 +1,5 @@
 backend:
-  name: github
-  repo: thisisritayao-beep/pejoy-site
+  name: git-gateway
   branch: main
 
 media_folder: "images"
