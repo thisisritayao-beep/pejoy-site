@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>IS_AM 是时 — Pejoy</title>
+<title>IS_AM — Pejoy</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../style.css">
@@ -29,12 +29,10 @@
 .result-box p{font-size:15px;color:var(--pj4);line-height:1.9}
 .case-gallery{display:flex;flex-direction:column;gap:16px;margin-top:8px}
 .case-gallery img{width:100%;border-radius:10px;object-fit:cover}
-.case-gallery-2col{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.case-gallery-2col{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:8px}
 .case-gallery-2col img{width:100%;border-radius:10px;object-fit:cover;aspect-ratio:3/4}
 .case-gallery-3col{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:8px}
 .case-gallery-3col img{width:100%;border-radius:10px;object-fit:cover;aspect-ratio:3/4}
-.concept-sketches{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:16px}
-.concept-sketches img{width:100%;border-radius:10px;object-fit:cover}
 .kol-label{font-size:12px;color:var(--ink3);font-weight:300;margin-bottom:10px;padding-bottom:10px;border-bottom:0.5px solid var(--border)}
 .back-link{display:inline-flex;align-items:center;gap:8px;font-size:13px;color:var(--ink3);text-decoration:none;padding:24px 0;transition:color 0.2s}
 .back-link:hover{color:var(--pj2)}
@@ -42,6 +40,9 @@
 .next-label{font-size:10px;letter-spacing:2.5px;color:var(--ink3);text-transform:uppercase;margin-bottom:12px}
 .next-case a{font-family:var(--serif);font-size:clamp(22px,3vw,36px);font-weight:400;color:var(--ink);text-decoration:none;display:flex;align-items:center;gap:16px;transition:color 0.2s}
 .next-case a:hover{color:var(--pj2)}
+/* concept design sketch images */
+.concept-sketches{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:16px}
+.concept-sketches img{width:100%;border-radius:10px;object-fit:cover}
 @media(max-width:768px){
   .case-hero{height:300px}
   .case-gallery-2col{grid-template-columns:1fr}
@@ -51,7 +52,7 @@
 </style>
 </head>
 <body class="en">
-
+ 
 <nav>
   <div class="nav-inner">
     <a href="../index.html" class="logo">
@@ -87,7 +88,7 @@
       <span class="meta-tag" data-en>E-commerce</span><span class="meta-tag" data-zh>电商运营</span>
       <span class="meta-tag" data-en>KOL Collaboration</span><span class="meta-tag" data-zh>博主合作</span>
     </div>
-    <h1><span data-en>IS_AM 是时</span><span data-zh>IS_AM 是时</span></h1>
+    <h1><span data-en>IS_AM</span><span data-zh>IS_AM 是时</span></h1>
     <p class="case-subtitle">
       <span data-en>Palace Museum Collaboration — A jewelry collection inspired by imperial garden scrolls of the Qing Dynasty</span>
       <span data-zh>故宫博物院联名珠宝 — 以雍正十二月行乐图为灵感的游园系列</span>
@@ -115,29 +116,29 @@
     <!-- THE COLLABORATION -->
     <div class="case-section fade-in">
       <h2><span data-en>The Collaboration</span><span data-zh>联名背景</span></h2>
-      <img src="../images/isam-concept-1.jpg" alt="IS_AM × Palace Museum" style="width:100%;border-radius:10px;margin-bottom:24px" loading="lazy">
-      <p>
+      <p style="margin-bottom:24px">
         <span data-en>IS_AM partnered with the Palace Museum (故宫博物院) to create the Garden Stroll Collection (游园系列), inspired by the Qing Dynasty imperial scroll "Twelve Months of Leisure" (雍正十二月行乐图). The scroll depicts Emperor Yongzheng enjoying seasonal rituals across all twelve months, set within the landscapes of the Old Summer Palace — blending Chinese garden architecture with Western pavilions in a world entirely his own.</span>
         <span data-zh>IS_AM与故宫博物院联名推出游园系列珠宝，灵感源自清代宫廷绘画《雍正十二月行乐图》。这组作品按春夏秋冬四季十二月的顺序，描绘雍正皇帝游园行乐的各个场景——以圆明园为背景，中式园林与西式亭台并存，构建出一个专属皇帝的美学世界。</span>
       </p>
-      <img src="../images/isam-concept-2.jpg" alt="Twelve Months of Leisure — Qing Dynasty imperial scroll" style="width:100%;border-radius:10px;margin-top:24px" loading="lazy">
+      <img src="../images/isam-concept-1.jpg" alt="IS_AM × Palace Museum" style="width:100%;border-radius:10px;margin-bottom:16px" loading="lazy">
+      <img src="../images/isam-concept-2.jpg" alt="Twelve Months of Leisure — Qing Dynasty imperial scroll" style="width:100%;border-radius:10px" loading="lazy">
     </div>
 
     <!-- DESIGN CONCEPT -->
     <div class="case-section fade-in">
       <h2><span data-en>Design Concept</span><span data-zh>设计概念</span></h2>
-      <img src="../images/isam-concept-3.jpg" alt="Design Theory — window and fan shapes" style="width:100%;border-radius:10px;margin-bottom:24px" loading="lazy">
-      <p>
+      <p style="margin-bottom:24px">
         <span data-en>The twelve scroll paintings are filled with depictions of windows — the essential frame through which one sees the outside world. Classical Chinese fans share a similar silhouette to window frames, and their silk embroidery often depicts natural landscapes. In this sense, the fan is itself a symbol of a window: a way of viewing the world through an aperture. Three iconic window and fan shapes were selected as the foundational forms of the collection.</span>
         <span data-zh>十二张行乐图中有大量窗户的描绘——窗户是看到外面世界的重要途径。古典团扇常采用与窗框类似的形状，扇面绢绣也大量描绘自然风光。一定程度上，团扇本身就是窗户的象征，透过窗扇去看外面的世界。我们从行乐图中选取三种典型的窗（扇）形制，作为整套设计的基本型元素。</span>
       </p>
-      <div class="concept-sketches">
+      <img src="../images/isam-concept-3.jpg" alt="Design Theory — window and fan shapes" style="width:100%;border-radius:10px" loading="lazy">
+      <div class="concept-sketches" style="margin-top:16px">
         <img src="../images/isam-concept-4.jpg" alt="Design sketch — Peach Blossom and Bamboo Forest" loading="lazy">
         <img src="../images/isam-concept-5.jpg" alt="Design sketch — Peach Blossom and Mountain Rocks" loading="lazy">
       </div>
     </div>
 
-    <!-- MY ROLE -->
+    <!-- What I did -->
     <div class="case-section fade-in">
       <h2><span data-en>My Role</span><span data-zh>我的工作</span></h2>
       <ul>
@@ -145,13 +146,13 @@
           <span data-en>Led brand strategy and creative direction for the Garden Stroll Collection — translating imperial scroll paintings into a cohesive jewelry concept</span>
           <span data-zh>主导游园系列品牌策划与创意方向，将《雍正十二月行乐图》转化为完整珠宝设计概念</span>
         </li>
-        <li>
-          <span data-en>Collaborated with the brand designer on the window and fan design language — three iconic frame shapes derived from classical architectural motifs in the scrolls</span>
-          <span data-zh>配合品牌设计师完善窗（扇）设计语言，从十二幅行乐图中萃取圆扇、宫廷窗、折扇三种经典形制</span>
-        </li>
-        <li>
-          <span data-en>Coordinated material selection across the collection — pink mother-of-pearl for Peach Blossom, malachite for Bamboo Forest, black onyx for Mountain Rocks — including the reversible dual-stone design</span>
-          <span data-zh>协调系列材质选定——桃花（粉色珍珠贝）、竹林（孔雀石）、山石（黑玛瑙）——包括可翻转双宝石设计</span>
+<li>
+  <span data-en>Collaborated with the brand designer on the window and fan design language — three iconic frame shapes derived from classical architectural motifs in the scrolls</span>
+  <span data-zh>配合品牌设计师完善窗（扇）设计语言，从十二幅行乐图中萃取圆扇、宫廷窗、折扇三种经典形制</span>
+</li>
+<li>
+  <span data-en>Coordinated material selection across the collection — pink mother-of-pearl for Peach Blossom, malachite for Bamboo Forest, black onyx for Mountain Rocks — including the reversible dual-stone design</span>
+  <span data-zh>协调系列材质选定——桃花（粉色珍珠贝）、竹林（孔雀石）、山石（黑玛瑙）——包括可翻转双宝石设计</span>
         </li>
         <li>
           <span data-en>Art directed product photography and KOL campaign shoots across classical garden and pavilion environments</span>
@@ -165,36 +166,33 @@
     </div>
 
     <!-- PRODUCT PHOTOGRAPHY -->
-    <div class="case-section fade-in">
-      <h2><span data-en>Product Photography</span><span data-zh>产品拍摄</span></h2>
-      <div class="case-gallery">
-        <img src="../images/isam-p6.jpg" alt="IS_AM packaging with Palace Museum branding" loading="lazy">
-        <div class="case-gallery-2col">
-          <img src="../images/isam-p2.jpg" alt="IS_AM pendant necklace" loading="lazy">
-          <img src="../images/isam-p3.jpg" alt="IS_AM earrings" loading="lazy">
-        </div>
-        <img src="../images/isam-p11.jpg" alt="IS_AM full collection — green colorway" loading="lazy">
-        <div class="case-gallery-2col">
-          <img src="../images/isam-p7.jpg" alt="IS_AM pendants — malachite and mother-of-pearl" loading="lazy">
-          <img src="../images/isam-p8.jpg" alt="IS_AM bracelet — pink mother-of-pearl" loading="lazy">
-        </div>
-        <img src="../images/isam-p12.jpg" alt="IS_AM complete collection display" loading="lazy">
-        <div class="case-gallery-2col">
-          <img src="../images/isam-p4.jpg" alt="IS_AM necklace in box" loading="lazy">
-          <img src="../images/isam-p9.jpg" alt="IS_AM pendant — malachite in box" loading="lazy">
-        </div>
-      </div>
-    </div>
+<div class="case-gallery">
+  <img src="../images/isam-p6.jpg" alt="IS_AM packaging" loading="lazy">
+  <div class="case-gallery-2col">
+    <img src="../images/isam-p2.jpg" alt="IS_AM pendant necklace" loading="lazy">
+    <img src="../images/isam-p3.jpg" alt="IS_AM earrings" loading="lazy">
+  </div>
+  <img src="../images/isam-p11.jpg" alt="IS_AM full collection" loading="lazy">
+  <div class="case-gallery-2col">
+    <img src="../images/isam-p7.jpg" alt="IS_AM pendants" loading="lazy">
+    <img src="../images/isam-p8.jpg" alt="IS_AM bracelet" loading="lazy">
+  </div>
+  <img src="../images/isam-p12.jpg" alt="IS_AM complete collection" loading="lazy">
+  <div class="case-gallery-2col">
+    <img src="../images/isam-p4.jpg" alt="IS_AM necklace in box" loading="lazy">
+    <img src="../images/isam-p9.jpg" alt="IS_AM pendant in box" loading="lazy">
+  </div>
+</div>
 
     <!-- KOL CAMPAIGN -->
     <div class="case-section fade-in">
       <h2><span data-en>KOL Campaign</span><span data-zh>博主合作</span></h2>
-      <p>
+      <p style="margin-bottom:32px">
         <span data-en>The collection launched through two KOL campaigns set in heritage locations — classical gardens, pavilions, and traditional interiors — creating visual storytelling that connects the jewelry directly to its cultural origins.</span>
         <span data-zh>系列通过两位博主的推广活动正式上新，取景于古典园林、亭台楼阁与传统室内空间，以真实的文化叙事将珠宝与其文化根源直接相连。</span>
       </p>
 
-      <div class="kol-label" style="margin-top:32px">
+      <div class="kol-label">
         <span data-en>KOL 01 — 七小糯咪 · Classical Hanfu style</span>
         <span data-zh>博主 01 — 七小糯咪 · 汉服古典风格</span>
       </div>
