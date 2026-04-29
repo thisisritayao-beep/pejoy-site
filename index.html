@@ -69,7 +69,23 @@
 .contact p{font-size:15px;color:rgba(255,255,255,0.6);margin-bottom:36px;font-weight:300}
 .contact-email{display:inline-block;padding:16px 36px;background:#fff;color:var(--pj);border:none;border-radius:var(--rm);font-size:15px;font-weight:500;font-family:var(--sans);cursor:pointer;text-decoration:none;transition:opacity 0.2s}
 .contact-email:hover{opacity:0.9}
-
+  
+/* RITA MODULE */
+.rita-module{padding:80px 0;background:var(--bg2)}
+.rita-module-inner{display:grid;grid-template-columns:200px 1fr;gap:56px;align-items:center}
+.rita-module-photo{border-radius:12px;overflow:hidden;aspect-ratio:3/4}
+.rita-module-photo img{width:100%;height:100%;object-fit:cover;display:block}
+.rita-module-text .tag-label{margin-bottom:12px;display:block}
+.rita-module-text h2{font-family:var(--serif);font-size:clamp(28px,3vw,40px);font-weight:400;color:var(--ink);line-height:1.1;margin-bottom:20px}
+.rita-module-text h2 em{font-style:italic;color:var(--pj2)}
+.rita-module-text p{font-size:15px;color:var(--ink2);line-height:1.85;font-weight:300;max-width:560px}
+.rita-badges{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
+.rita-badge{font-size:10px;padding:4px 12px;border-radius:12px;background:var(--white);border:0.5px solid var(--border);color:var(--ink2);letter-spacing:0.3px}
+@media(max-width:768px){
+  .rita-module-inner{grid-template-columns:1fr;gap:32px}
+  .rita-module-photo{max-width:160px}
+}
+  
 @media(max-width:768px){
   .hero-inner{padding:0 20px}
   .about-grid{grid-template-columns:1fr;gap:40px}
@@ -144,7 +160,31 @@
     <span>Brand Strategy</span><span class="dot">·</span><span>VI Design</span><span class="dot">·</span><span>Social Media</span><span class="dot">·</span><span>Website Development</span><span class="dot">·</span><span>Cross-cultural Marketing</span><span class="dot">·</span><span>Customer Service</span><span class="dot">·</span><span>KOL Collaboration</span><span class="dot">·</span><span>EDM Campaigns</span><span class="dot">·</span>
   </div>
 </div>
-
+<!-- RITA -->
+<section class="rita-module">
+  <div class="container">
+    <div class="rita-module-inner fade-in">
+      <div class="rita-module-photo">
+        <img src="images/rita-photo.jpg" alt="Rita Yao">
+      </div>
+      <div class="rita-module-text">
+        <span class="tag-label"><span data-en>The person behind Pejoy</span><span data-zh>Pejoy 创始人</span></span>
+        <h2><span data-en>Hi, I'm <em>Rita Yao</em></span><span data-zh>你好，我是 <em>姚丽环</em></span></h2>
+        <p>
+          <span data-en>Brand strategist and creative director with 8+ years across China, Hong Kong and Australia. I specialize in helping international brands find their footing in China — and Chinese brands tell their story to the world. My work spans fashion, jewelry, and luxury lifestyle, with a sharp eye for cultural nuance and emerging aesthetics.</span>
+          <span data-zh>品牌策划人与创意总监，8年跨越中国大陆、香港与澳大利亚的从业经历。专注帮助国际品牌打入中国市场，也助力中国品牌向世界讲述自己的故事。深耕时尚、珠宝与奢侈生活方式领域，对文化细节与新兴审美有敏锐洞察。</span>
+        </p>
+        <div class="rita-badges">
+          <span class="rita-badge"><span data-en>Brand Strategy</span><span data-zh>品牌策划</span></span>
+          <span class="rita-badge"><span data-en>Fashion & Jewelry</span><span data-zh>时尚珠宝</span></span>
+          <span class="rita-badge"><span data-en>Cross-cultural Marketing</span><span data-zh>跨文化营销</span></span>
+          <span class="rita-badge">Xiaohongshu 100K+</span>
+          <span class="rita-badge"><span data-en>HKU Double Master's</span><span data-zh>港大双硕士</span></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 <!-- ABOUT -->
 <section class="about" id="about">
   <div class="container">
